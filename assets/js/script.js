@@ -1,8 +1,13 @@
-/**
+/*****************************************************
  * LA Paralegal Solutions, LLC
- * Main JavaScript File
+ * Professional Paralegal Services Website
+ * Copyright 2026, LA Paralegal Solutions, LLC
+ * Responsive CSS - Mobile-first approach
  * Filename & relative path: /assets/js/script.js
- */
+ * Date Created: 2025-12-30
+ * Last Modified: 2025-12-31 
+ * Website Designer: Charley CycoNerd
+ *****************************************************/
 
 // Update footer year automatically
 document.addEventListener("DOMContentLoaded", () => {

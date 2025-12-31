@@ -1,11 +1,12 @@
 /*****************************************************
  * LA Paralegal Solutions, LLC
  * Professional Paralegal Services Website
+ * Copyright 2026, LA Paralegal Solutions, LLC
  * Responsive CSS - Mobile-first approach
  * Filename & relative path: /assets/css/style.css
  * Date Created: 2025-12-30
+ * Last Modified: 2025-12-31 
  * Website Designer: Charley CycoNerd
- * Last Modified: 2025-12-31 - Path fixes & responsive improvements
  *****************************************************/
 
 /* --------------------
@@ -79,6 +80,11 @@ body {
 /* Main content area grows to push footer down */
 main {
     flex: 1 0 auto;
+
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
 }
 
 /* Footer stays at bottom */
@@ -176,6 +182,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile menu toggle (hidden by default, add JS if needed) */
 .menu-toggle {
     display: none;
+    min-height: clamp(65vh, 80vh, 92vh);
     background: none;
     border: none;
     color: var(--text-light);
@@ -446,6 +453,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-size: clamp(1.6rem, 5vw, 2.5rem);
     margin-bottom: 0.5rem;
+    flex-shrink: 0;
 }
 
 .page-header p {
@@ -459,6 +467,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------- */
 .content-section {
     padding: 2.5rem 1rem;
+    flex: 1 0 auto;
+    min-height: 0;
 }
 
 .content-section.dark {
@@ -473,6 +483,7 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center;
     background-attachment: scroll;
     color: var(--text-light);
+    flex: 1;
 }
 
 @supports (background-image: url("../images/hero-bg.webp")) {
@@ -487,6 +498,7 @@ h1, h2, h3, h4, h5, h6 {
         background-size: cover;
         background-position: center;
         background-attachment: scroll;
+        flex: 1;
     }
 }
 
