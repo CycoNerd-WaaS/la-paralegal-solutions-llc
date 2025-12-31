@@ -3,62 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LA Paralegal Solutions, LLC</title>
+    <title>Rates | LA Paralegal Solutions, LLC</title>
 
-    <!-- Preload background image -->
+    <!-- Preload hero background -->
     <link rel="preload" as="image" href="assets/images/hero-bg.webp" type="image/webp">
 
     <!-- SEO / Metadata -->
-    <meta name="description" content="Professional freelance paralegal services exclusively for licensed attorneys throughout California.">
+    <meta name="description" content="Professional hourly rates for paralegal services. Standard litigation support starting at $110/hour. Services exclusively for licensed California attorneys.">
     <meta name="robots" content="index, follow">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Fonts (system-first, no Google dependency yet) -->
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header class="site-header">
-    <div class="container header-flex">
-        <div class="brand">
-            <h1>LA Paralegal Solutions, LLC</h1>
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="brand">
+                <h1>LA Paralegal <span>Solutions</span>, LLC</h1>
+            </div>
+
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="rates.html" class="active">Rates</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="rates.html">Rates</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <main id="main-content">
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <h2>Rates</h2>
+            <p>Professional Hourly Rates Exclusively for Licensed Attorneys</p>
+        </section>
 
-<main>
+        <!-- RATES CONTENT -->
+        <section class="content-section dark">
+            <div class="container">
+                
+                <div class="rates-grid">
+                    <div class="rate-card">
+                        <div class="rate-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h4>Standard Litigation Support</h4>
+                        <p class="price">$110<span> per hour</span></p>
+                    </div>
 
+                    <div class="rate-card">
+                        <div class="rate-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h4>Advanced Motion Practice</h4>
+                        <p class="price">$135<span> per hour</span></p>
+                    </div>
 
+                    <div class="rate-card">
+                        <div class="rate-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                            </svg>
+                        </div>
+                        <h4>Appellate &amp; Writ Practice</h4>
+                        <p class="price">$160<span> per hour</span></p>
+                    </div>
 
-</main>
+                    <div class="rate-card">
+                        <div class="rate-card-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <h4>Rush / Expedited Work</h4>
+                        <p class="price">$180<span> per hour</span></p>
+                    </div>
+                </div>
 
-<footer class="site-footer">
-    <div class="container footer-content">
-        <p>
-            © <span id="year"></span> LA Paralegal Solutions, LLC. All rights reserved.
-        </p>
+                <div class="retainer-info">
+                    <h4>Retainer Agreements</h4>
+                    <p>
+                        Retainer agreements are recommended for substantial projects and appellate matters 
+                        to ensure seamless service and commitment to your case needs. Contact us to discuss 
+                        retainer options tailored to your practice requirements.
+                    </p>
+                </div>
 
-        <p class="disclaimer">
-            LA Paralegal Solutions, LLC is not a law firm and does not provide legal advice
-            or legal representation. Services are provided exclusively to licensed attorneys
-            under attorney supervision in compliance with California Business & Professions
-            Code §§ 6450–6456.
-        </p>
-    </div>
-</footer>
+            </div>
+        </section>
 
-<script src="assets/js/script.js"></script>
+        <!-- CTA Section -->
+        <section class="value-prop">
+            <div class="container">
+                <h3>Questions About Our Rates?</h3>
+                <p>
+                    We're happy to discuss your specific needs and provide a customized quote 
+                    for your project or ongoing support requirements.
+                </p>
+                <p class="mt-2">
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <p>
+                © <span id="year"></span> LA Paralegal Solutions, LLC. All rights reserved.
+            </p>
+            <p class="disclaimer">
+                LA Paralegal Solutions, LLC is not a law firm and does not provide legal advice
+                or legal representation. Services are provided exclusively to licensed attorneys
+                under attorney supervision in compliance with California Business &amp; Professions
+                Code §§ 6450–6456.
+            </p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
