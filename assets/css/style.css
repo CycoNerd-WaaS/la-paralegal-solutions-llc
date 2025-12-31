@@ -244,6 +244,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.75rem;
     line-height: 1.25;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    padding-top: 15rem;
 }
 
 .hero h2 em {
