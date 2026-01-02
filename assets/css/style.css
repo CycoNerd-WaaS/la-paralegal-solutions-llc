@@ -5,7 +5,7 @@
  * Responsive CSS - Mobile-first approach
  * Filename & relative path: /assets/css/style.css
  * Date Created: 2025-12-30
- * Last Modified: 2025-12-31 
+ * Last Modified: 2026-01-01
  * Website Designer: Charley CycoNerd
  *****************************************************/
 
@@ -80,8 +80,6 @@ body {
 /* Main content area grows to push footer down */
 main {
     flex: 1 0 auto;
-
-    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     min-height: 0;
@@ -132,34 +130,69 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1000;
 }
 
+.site-header .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Mobile-first: Header stacks vertically
+   Brand/logo on top, full navigation below as a unit */
 .header-flex {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     padding: 0.75rem 0;
     gap: 0.5rem;
 }
 
+/* =====================
+   BRAND / LOGO SECTION
+   Logo positioned beside company name
+===================== */
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    /* On mobile, brand takes full width to force nav to next line */
+    flex: 1 1 100%;
+    justify-content: center;
+}
+
+.site-logo {
+    height: 40px;
+    width: auto;
+    flex-shrink: 0;
+}
+
 .brand h1 {
     font-family: var(--font-heading);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     white-space: nowrap;
-    text-align: center;
+    text-align: left;
+    line-height: 1.2;
 }
 
 .brand h1 span {
     color: var(--gold);
 }
 
-/* Navigation */
+/* Navigation - stays together as a unit */
+.main-nav {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 0.25rem;
-    flex-wrap: wrap;
+    gap: 0.5rem;
+    flex-wrap: nowrap; /* Prevent individual items from wrapping */
     justify-content: center;
 }
 
@@ -182,7 +215,6 @@ h1, h2, h3, h4, h5, h6 {
 /* Mobile menu toggle (hidden by default, add JS if needed) */
 .menu-toggle {
     display: none;
-    min-height: clamp(65vh, 80vh, 92vh);
     background: none;
     border: none;
     color: var(--text-light);
@@ -198,7 +230,7 @@ h1, h2, h3, h4, h5, h6 {
 --------------------- */
 .hero {
     position: relative;
-    min-height: auto;
+    min-height: clamp(65vh, 80vh, 92vh);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -251,7 +283,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.75rem;
     line-height: 1.25;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    padding-top: 15rem;
+    padding-top: 10rem;
 }
 
 .hero h2 em {
@@ -345,6 +377,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card {
+    min-height: 15.25rem;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(
         135deg,
         rgba(15, 31, 47, 0.98) 0%,
@@ -365,16 +400,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-card-icon {
-    width: 45px;
-    height: 45px;
     margin: 0 auto 0.75rem;
-    color: var(--gold);
 }
 
-.service-card-icon svg {
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
+.service-card-icon img {
+    width: 72px;
+    height: 72px;
+    display: block;
 }
 
 .service-card h4 {
@@ -389,6 +421,13 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-muted);
     font-size: 0.9rem;
     line-height: 1.5;
+    flex-grow: 1;
+}
+
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 /* --------------------
@@ -418,7 +457,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --------------------
    PAGE HEADERS (for inner pages)
-   CORRECTED PATHS
 --------------------- */
 .page-header {
     background: 
@@ -433,6 +471,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-light);
     text-align: center;
     padding: 2.5rem 1rem 2rem;
+    flex-shrink: 0;
 }
 
 @supports (background-image: url("../images/hero-bg.webp")) {
@@ -463,11 +502,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --------------------
    CONTENT SECTIONS
-   CORRECTED PATHS
 --------------------- */
 .content-section {
     padding: 2.5rem 1rem;
-    flex: 1 0 auto;
+    /* flex: 1 0 auto; */
+    flex: 1;
     min-height: 0;
 }
 
@@ -795,7 +834,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .service-list li::before {
-    content: "✓";
+    content: "✔";
     color: var(--gold);
     position: absolute;
     left: 0;
@@ -864,8 +903,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Small phones (landscape) and up */
 @media (min-width: 480px) {
+    /* Brand/Logo - slightly larger on small landscape */
+    .site-logo {
+        height: 45px;
+    }
+
+    .site-header .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
     .brand h1 {
-        font-size: 1.1rem;
+        font-size: 1rem;
         letter-spacing: 0.75px;
     }
     
@@ -893,19 +942,44 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tablets (portrait) - around 600-767px */
 @media (min-width: 600px) {
-    .header-flex {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0;
-        min-height: 65px;
+    /* Specific width override so navigation has room. */
+    @media (min-width: 725px) and (max-width: 767px) { 
+        /* Header switches to horizontal: brand left, nav right */
+        .header-flex {
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 0;
+            min-height: 65px;
+        }
+        
+        /* Brand no longer forces full width */
+        .brand {
+            flex: 0 1 auto;
+            justify-content: flex-start;
+            gap: 0.875rem;
+        }
+        
+        /* Nav no longer takes full width */
+        .main-nav {
+            flex: 0 1 auto;
+            justify-content: flex-end;
+        }        
+    }
+    
+    .main-nav ul {
+        gap: 0.5rem;
     }
     
     .container {
         padding: 0 1.5rem;
     }
     
+    .site-logo {
+        height: 48px;
+    }
+    
     .brand h1 {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
     }
     
     .main-nav a {
@@ -947,10 +1021,40 @@ h1, h2, h3, h4, h5, h6 {
     
     .header-flex {
         min-height: 70px;
+    } 
+
+    @media (min-width: 800px) {
+        .header-flex { 
+            flex-wrap: nowrap; 
+            justify-content: space-between; 
+            padding: 0; 
+            min-height: 70px; 
+        } 
+        
+        .brand { 
+            flex: 0 1 auto; 
+            justify-content: flex-start; 
+            gap: 1rem; 
+        } 
+        
+        .main-nav { 
+            flex: 0 1 auto; 
+            justify-content: flex-end; 
+        }
+    }
+
+    
+    /* Brand/Logo - larger on tablet landscape */
+    .brand {
+        gap: 1rem;
+    }
+    
+    .site-logo {
+        height: 52px;
     }
     
     .brand h1 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
     }
     
@@ -1012,11 +1116,23 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .header-flex {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0;
         min-height: 80px;
     }
     
+    /* Brand/Logo - full size on desktop */
+    .brand {
+        gap: 1rem;
+    }
+    
+    .site-logo {
+        height: 55px;
+    }
+    
     .brand h1 {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
         letter-spacing: 1.5px;
     }
     
@@ -1060,6 +1176,15 @@ h1, h2, h3, h4, h5, h6 {
         --section-padding: 5rem;
     }
     
+    /* Brand/Logo - largest size */
+    .site-logo {
+        height: 58px;
+    }
+    
+    .brand h1 {
+        font-size: 1.4rem;
+    }
+    
     .hero {
         padding: 6rem 2rem 5rem;
     }
@@ -1090,6 +1215,10 @@ h1, h2, h3, h4, h5, h6 {
     
     body {
         font-size: 18px;
+    }
+    
+    .site-logo {
+        height: 62px;
     }
     
     .brand h1 {
