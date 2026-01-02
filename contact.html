@@ -44,7 +44,7 @@
     <header class="site-header">
         <div class="container header-flex">
             <div class="brand">
-                <img src="assets/images/logo-la-paralegal-smallsize.png" alt="" class="site-logo">
+                <img src="assets/images/logo-la-paralegal-smallsize.png" alt="LA Paralegal Solutions, LLC logo" class="site-logo">
                 <h1>LA Paralegal <span>Solutions</span>, LLC</h1>
             </div>
 
@@ -92,7 +92,7 @@
                                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                                     <polyline points="22,6 12,13 2,6"/>
                                 </svg>
-                                <span><a href="mailto:test@email.com">laparalegalsolutionsllc@gmail.com</a></span>
+                                <span><a href="mailto:laparalegalsolutionsllc@gmail.com">laparalegalsolutionsllc@gmail.com</a></span>
                                 <!-- TODO: Update when email@domain- is secured
                                 <span><a href="mailto:intake@laparalegalsolutions.com">intake@laparalegalsolutions.com</a></span> 
                                 -->
@@ -106,7 +106,7 @@
                                 <!-- TODO: Update when domain is secured
                                 <span><a href="https://CycoNerd-WaaS.github.io/la-paralegal-solutions-llc/" target="_blank" rel="noopener">laparalegalsolutions.com</a></span>
                                 -->
-                                <span>Website coming soon</span>
+                                <!--<span>Website coming soon</span>-->
                                 <span><a href="https://CycoNerd-WaaS.github.io/la-paralegal-solutions-llc/" target="_blank" rel="noopener">laparalegalsolutions.com</a></span>
                             </li>
                             <li>
@@ -124,7 +124,7 @@
 
                     <div class="contact-form-wrapper">
                         <h3>Send Us a Confidential Message</h3>
-                        <form class="contact-form" action="#" method="POST" name="contact">
+                        <form class="contact-form" action="https://formspree.io/f/xykzwygl" method="POST" name="contact">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" id="name" name="name" required placeholder="Your full name">
@@ -144,6 +144,8 @@
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
                             </div>
+                           
+                            <input type="hidden" name="_subject" value="Website Contact Form Submission">                           
                             
                             <div class="form-group">
                                 <label for="message">Your Message</label>
@@ -152,6 +154,7 @@
                             
                             <div class="form-submit">
                                 <button type="submit" class="btn-primary">Send Message</button>
+                                <input type="hidden" name="_next" value="https://cyconerd-waas.github.io/la-paralegal-solutions-llc/contact.html?success=1">
                             </div>
                             
                             <p class="form-disclaimer">

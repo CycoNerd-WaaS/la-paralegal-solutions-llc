@@ -283,7 +283,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.75rem;
     line-height: 1.25;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    padding-top: 10rem;
+    padding-top: 10rem; /*TODO: Refactor this. Let hero container do layout work*/
 }
 
 .hero h2 em {
@@ -795,6 +795,26 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 0.75rem;
 }
 
+/* Form Success Message */
+.form-success-message {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: rgba(201, 162, 77, 0.1);
+    border: 1px solid rgba(201, 162, 77, 0.3);
+}
+
+.form-success-message h3 {
+    color: var(--gold);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.form-success-message p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* --------------------
    SERVICES PAGE STYLES
 --------------------- */
@@ -1156,10 +1176,10 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: repeat(4, 1fr);
     }
     
-    .service-card-icon {
+    /* .service-card-icon {
         width: 55px;
         height: 55px;
-    }
+    } */
     
     .service-card h4 {
         font-size: 1.1rem;
@@ -1201,10 +1221,10 @@ h1, h2, h3, h4, h5, h6 {
         padding: 2.25rem;
     }
     
-    .service-card-icon {
+    /* .service-card-icon {
         width: 60px;
         height: 60px;
-    }
+    } */
 }
 
 /* Large screens / 4K - 1600px+ */
