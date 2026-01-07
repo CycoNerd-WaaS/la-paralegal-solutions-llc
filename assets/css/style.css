@@ -5,7 +5,7 @@
  * Responsive CSS - Mobile-first approach
  * Filename & relative path: /assets/css/style.css
  * Date Created: 2025-12-30
- * Last Modified: 2026-01-01
+ * Last Modified: 2026-01-07
  * Website Designer: Charley CycoNerd
  *****************************************************/
 
@@ -230,17 +230,18 @@ h1, h2, h3, h4, h5, h6 {
 --------------------- */
 .hero {
     position: relative;
-    /* min-height: clamp(65vh, 80vh, 92vh); */
-    /* justify-content: flex-start; */
-    min-height: clamp(50vh, 65vh, 85vh);
-    padding-top: clamp(4rem, 10vh, 8rem);
+
+    /* Let hero absorb extra vertical space so lower sections don't "balloon" on tall displays */
+    flex: 1 1 auto;
+    min-height: 14rem;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--text-light);
-    padding: 2.5rem 1rem 2rem; 
+    padding: clamp(1.75rem, 4vh, 3rem) 1rem 1.5rem;
     
     /* Background with overlay - JPG fallback first */
     background: 
@@ -303,6 +304,14 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0 0.5rem;
 }
 
+@media (min-width: 768px) {
+    /* Add modest negative margin only on wider screens. */
+    .services-preview {
+        margin-top: -1.25rem;
+        padding-top: 0.75rem;
+  }
+}
+
 /* --------------------
    BUTTONS
 --------------------- */
@@ -333,6 +342,8 @@ h1, h2, h3, h4, h5, h6 {
    Cards flow naturally below hero with seamless background
 --------------------- */
 .services-preview {
+    flex: 0 0 auto;
+    padding: 1.25rem 1rem 1.5rem; /* slightly tighter */
     position: relative;
     z-index: 10;
     padding: 1.5rem 1rem 2rem;
@@ -377,6 +388,8 @@ h1, h2, h3, h4, h5, h6 {
     gap: var(--card-gap);
     max-width: var(--max-width);
     margin: 0 auto;
+    /* Ensure grid items stretch (explicit; grid default is stretch, but keep it clear) */
+    align-items: stretch;
 }
 
 .service-card {
@@ -394,6 +407,8 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     box-shadow: var(--shadow-strong);
     transition: all var(--transition-medium);
+    /* Make the <article> fill the link (and therefore the grid cell) */
+    height: 100%;
 }
 
 .service-card:hover {
@@ -430,7 +445,10 @@ h1, h2, h3, h4, h5, h6 {
 .service-card-link {
     text-decoration: none;
     color: inherit;
-    display: block;
+    /* display: block; */
+    /* Make the <a> fill the grid cell and let the card stretch with it */
+    display: flex;
+    height: 100%;
 }
 
 /* --------------------
@@ -447,6 +465,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .value-prop h3 {
+    flex: 0 0 auto;
+    padding: 2rem 1rem;
     font-size: clamp(1.3rem, 3.5vw, 1.8rem);
     color: var(--navy);
     margin-bottom: 1rem;
@@ -1045,6 +1065,11 @@ h1, h2, h3, h4, h5, h6 {
     .header-flex {
         min-height: 70px;
     } 
+
+    .services-preview {
+        margin-top: -0.75rem;
+        padding-top: 1rem;
+    }
 
     @media (min-width: 800px) {
         .header-flex { 

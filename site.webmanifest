@@ -1,0 +1,87 @@
+{
+  "name": "LA Paralegal Solutions, LLC",
+  "short_name": "LA Paralegal",
+  "description": "Contract paralegal support for licensed attorneys in Los Angeles and throughout California.",
+  "lang": "en-US",
+  "dir": "ltr",
+
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+
+  "display": "standalone",
+  "background_color": "#0f1f2f",
+  "theme_color": "#0f1f2f",
+
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View service offerings.",
+      "url": "./services.html",
+      "icons": [
+        {
+          "src": "assets/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Rates",
+      "short_name": "Rates",
+      "description": "View rates and billing terms.",
+      "url": "./rates.html",
+      "icons": [
+        {
+          "src": "assets/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Request paralegal support.",
+      "url": "./contact.html",
+      "icons": [
+        {
+          "src": "assets/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn about LA Paralegal Solutions, LLC.",
+      "url": "./about.html",
+      "icons": [
+        {
+          "src": "assets/icons/android-chrome-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+
+  "prefer_related_applications": false
+}
