@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-Sitemap: none
+Sitemap: https://laparalegalsolutions.com/sitemap.xml
