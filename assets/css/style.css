@@ -230,14 +230,17 @@ h1, h2, h3, h4, h5, h6 {
 --------------------- */
 .hero {
     position: relative;
-    min-height: clamp(65vh, 80vh, 92vh);
+    /* min-height: clamp(65vh, 80vh, 92vh); */
+    /* justify-content: flex-start; */
+    min-height: clamp(50vh, 65vh, 85vh);
+    padding-top: clamp(4rem, 10vh, 8rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--text-light);
-    padding: 2.5rem 1rem 2rem;
+    padding: 2.5rem 1rem 2rem; 
     
     /* Background with overlay - JPG fallback first */
     background: 
@@ -283,7 +286,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.75rem;
     line-height: 1.25;
     text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    padding-top: 10rem; /*TODO: Refactor this. Let hero container do layout work*/
+    /*padding-top: 10rem; /*TODO: Refactor this. Let hero container do layout work*/
 }
 
 .hero h2 em {
